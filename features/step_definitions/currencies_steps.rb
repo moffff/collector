@@ -37,3 +37,8 @@ Given(/^I should see (\d+) remaining countries for currency '(.+)'$/) do |count,
   block.should have_content "Remaining countries: #{count}"
 end
 
+Given(/^I should see (\d+) available countries for currency '(.+)'$/) do |count, currency_name|
+  block = find("tr", :text => currency_name)
+  block.should have_content "Available countries: #{count}"
+end
+

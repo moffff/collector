@@ -8,6 +8,7 @@
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -16,6 +17,7 @@
       <tr>
         <td><%= currency.code %></td>
         <td><%= link_to currency.name, currency %></td>
+        <td>Available countries: <%= currency.countries.count %></td>
         <td>Visited countries: <%= currency.countries.visited.count %></td>
         <td>Remaining countries: <%= currency.countries.remainig.count %></td>
         <td><%= link_to 'Show', currency %></td>

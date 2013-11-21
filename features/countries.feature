@@ -26,10 +26,15 @@ Feature: Countries
     And I am visited the page with all currencies
     And I should see 0 visited countries for currency 'name1'
     And I should see 1 remaining countries for currency 'name1'
+    And I should see 1 available countries for currency 'name1'
+
     And I should see 2 visited countries for currency 'name2'
     And I should see 1 remaining countries for currency 'name2'
+    And I should see 3 available countries for currency 'name2'
+
     And I should see 2 visited countries for currency 'name3'
     And I should see 0 remaining countries for currency 'name3'
+    And I should see 2 available countries for currency 'name3'
 
   Scenario: Tracking visited countries
     Given I am Mr. Smart
