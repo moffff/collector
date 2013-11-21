@@ -1,0 +1,4 @@
+collector
+=========
+
+Rails test app
