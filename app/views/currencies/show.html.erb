@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @currency.code %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @currency.name %>
+</p>
+
+<p>
+  <strong>Countries:</strong>
+  <ul>
+    <% @currency.countries.each do |country| %>
+      <li>
+        <%= country.code %> | <%= country.name %>
+        <% if country.visited? %>
+          - visited
+        <% else %>
+          - not visited
+          <%= link_to "Change status to visited!", visited_country_path(country), :method => :post %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Edit', edit_currency_path(@currency) %> |
+<%= link_to 'Back', currencies_path %>
